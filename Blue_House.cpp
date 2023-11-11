@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-int main() {
-    // Declarar e inicializar una lista de números enteros
-    char Preset_User[3][20] = {"Daniel","Juan","Danna",};
+int main(){
+
+	// Declarar
+    char Preset_User[3][20] = {"Daniel", "Juan", "Danna"};
     int Preset_Key[3] = {34523, 12321, 12345};
     
     // Valor a buscar, ingresado por el usuario
@@ -20,6 +21,19 @@ int main() {
     int Verificado = 0;
     
     for (int i = 0; i < 3; i++) {
-    	if (strcmp(User, Preset_User[i]) == 0 && Key, Preset_Key[i]){
-    		
+    	if (strcmp(User, Preset_User[i]) == 0 && Key == Preset_Key[i]){
+    		Verificado = 1; //Si se encuentra una coincidencia La variable cmbia a 1
+    		break;
 		}
+	}
+	
+	if (Verificado){
+		printf("Sus Notas son\n");
+	}
+	
+	else{
+	printf("Usuario o clave incorrectos.\n");
+	}
+	
+	return 0;
+}
